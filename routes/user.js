@@ -211,7 +211,7 @@ router.patch('/:username/defaultAvatar', verify, (req, res) => {
 
 // Login/Register routes
 
-const jwtSecret = process.env.jwtSecret;
+
 
 // @route POST /users/register
 // @desc Create a user (Register)
@@ -243,7 +243,7 @@ router.post('/register', async (req, res) => {
     const savedUser = await newUser.save();
     
     // Create a token
-    const token = jwt.sign({ _id: savedUser._id }, jwtSecret);
+    const token = jwt.sign({ _id: savedUser._id }, process.env.jwtSecret);
 
     // Send token to header
     res.header('auth-token', token).send(token);
@@ -269,13 +269,13 @@ router.post('/login', async (req, res) => {
     } else {
       const validPass = await bcrypt.compare(password, emailExists.password);
       if (!validPass) return res.status(400).send('Invalid password');
-      const token = jwt.sign({ _id: emailExists._id }, jwtSecret);
+      const token = jwt.sign({ _id: emailExists._id }, process.env.jwtSecret);
       res.header('auth-token', token).send(token);
     }
   } else {
     const validPass = await bcrypt.compare(password, userExists.password);
     if (!validPass) return res.status(400).send('Invalid password');
-    const token = jwt.sign({ _id: userExists._id }, jwtSecret);
+    const token = jwt.sign({ _id: userExists._id }, process.env.jwtSecret);
     res.header('auth-token', token).send(token);
   }
 });
