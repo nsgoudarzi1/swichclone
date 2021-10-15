@@ -211,7 +211,7 @@ router.patch('/:username/defaultAvatar', verify, (req, res) => {
 
 // Login/Register routes
 
-
+const jwtSecret = process.env.jwtSecret;
 
 // @route POST /users/register
 // @desc Create a user (Register)
