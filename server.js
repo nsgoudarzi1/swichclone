@@ -24,7 +24,7 @@ app.use(express.json());
 const uri = process.env.ATLAS_URI;
 
 // Database Connection
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://User1:cdeTVprpkwCMQbh7@cluster1.z0sxh.mongodb.net/users?retryWrites=true&w=majority", { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected ...'))
   .catch(err => console.log(err));
 
