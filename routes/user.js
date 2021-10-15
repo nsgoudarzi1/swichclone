@@ -40,7 +40,7 @@ const User = require('../models/User');
 // @route GET /users
 // @desc Get all users
 // @access Public
-router.get('/', (req, res) => {
+router.get('*', (req, res) => {
   User.find()
     .sort({ date: -1 })
     .select('-password -email')
