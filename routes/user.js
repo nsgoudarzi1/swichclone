@@ -243,7 +243,7 @@ router.post('/register', async (req, res) => {
     const savedUser = await newUser.save();
     
     // Create a token
-    const token = jwt.sign({ _id: savedUser._id }, process.env.jwtSecret);
+    const token = jwt.sign({ _id: savedUser._id }, jwtSecret);
 
     // Send token to header
     res.header('auth-token', token).send(token);
@@ -269,7 +269,7 @@ router.post('/login', async (req, res) => {
     } else {
       const validPass = await bcrypt.compare(password, emailExists.password);
       if (!validPass) return res.status(400).send('Invalid password');
-      const token = jwt.sign({ _id: emailExists._id }, process.env.jwtSecret);
+      const token = jwt.sign({ _id: emailExists._id }, jwtSecret);
       res.header('auth-token', token).send(token);
     }
   } else {
