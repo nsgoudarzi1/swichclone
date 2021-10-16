@@ -1,6 +1,6 @@
 * {
   font-size: 1rem;
-  font-family: Karla,Helvetica,sans-serif;
+  font-family: Karla, Helvetica, sans-serif;
 }
 
 html {
@@ -13,7 +13,7 @@ body {
 }
 
 h2 {
-  color: #1f1c1c
+  color: #1f1c1c;
 }
 
 .green-container {
@@ -22,7 +22,7 @@ h2 {
   bottom: 0;
   height: 100%;
   width: 100%;
-  background-color: #39e09b;
+  background-color: #7868e6;
   overflow: auto;
 }
 
@@ -43,7 +43,7 @@ h2 {
   text-align: center;
   padding: 17px;
   text-decoration: none;
-  color: #39e09b;
+  color: #7868e6;
   overflow: hidden;
 }
 
@@ -69,7 +69,7 @@ h2 {
 }
 
 .link:hover {
-  background-color: #39e09b;
+  background-color: #7868e6;
 }
 
 .loader {
@@ -127,8 +127,6 @@ h2 {
   margin: 5px;
 }
 
-
-
 .login-buttons {
   display: flex;
   justify-content: center;
@@ -182,7 +180,7 @@ h2 {
 
 .sign-in-button:hover {
   color: rgb(31, 28, 28);
-  background-color: white
+  background-color: white;
 }
 
 .sign-in-button {
@@ -226,7 +224,7 @@ h2 {
   padding: 30px 50px 30px 50px;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: white
+  color: white;
 }
 
 .user-submit:hover {
@@ -253,7 +251,7 @@ input {
 .footer a {
   color: white;
   text-decoration: none;
-  font-size: 20px;;
+  font-size: 20px;
 }
 
 .flex-container {
@@ -298,7 +296,7 @@ input {
 }
 
 .active {
-  border-bottom: 3px solid #39e09b;
+  border-bottom: 3px solid #7868e6;
 }
 
 .remove-button {
@@ -342,7 +340,6 @@ input {
   padding: 20px;
   text-decoration: none;
   color: #1f1c1c;
-
 }
 
 .edit-linkTitle {
@@ -387,7 +384,7 @@ input {
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: groove;
-  border-bottom-color: #39e09b;
+  border-bottom-color: #7868e6;
 }
 
 .edit-link-input:focus {
@@ -418,7 +415,7 @@ input {
   margin-bottom: 60px;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .avatar {
@@ -454,7 +451,7 @@ input {
 
 .avatar-buttons button {
   margin: 10px;
-  border: 1px solid #39e09b;
+  border: 1px solid #7868e6;
   background: transparent;
   cursor: pointer;
 }
@@ -519,7 +516,6 @@ input {
   #added {
     font-size: 15px;
   }
-
 }
 
 @media only screen and (max-width: 1250px) {
@@ -568,7 +564,7 @@ input {
   .linksList {
     max-width: 480px;
   }
-  
+
   .edit-url-wrap {
     max-width: 320px;
   }
